@@ -1,30 +1,34 @@
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import React, { useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
-  WalletDisconnectButton,
   WalletModalProvider,
+  WalletDisconnectButton,
   WalletMultiButton,
 } from "@solana/wallet-adapter-react-ui";
-import { UnsafeBurnerWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
-import { useMemo } from "react";
+import "@solana/wallet-adapter-react-ui/styles.css";
 
-export default function Wallet() {
+function Wallet() {
   const network = WalletAdapterNetwork.Devnet;
+
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
-  const wallets = useMemo(() => [new UnsafeBurnerWalletAdapter()], [network]);
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
+      <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <WalletMultiButton />
-          <WalletDisconnectButton />
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <WalletMultiButton />
+            <WalletDisconnectButton />
+          </div>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
   );
 }
+
+export default Wallet;

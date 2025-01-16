@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -12,6 +12,7 @@ import {
 import { clusterApiUrl } from "@solana/web3.js";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import Info from "./info";
+import Airdrop from "./airdrop";
 
 function Wallet() {
   const network = WalletAdapterNetwork.Devnet;
@@ -33,6 +34,9 @@ function Wallet() {
               <WalletDisconnectButton className="!bg-red-600 hover:!bg-red-700" />
             </div>
           </nav>
+          <div className="flex justify-center mx-auto h-full border rounded-xl bg-gray-200 max-w-5xl shadow-2xl mt-8">
+            <Airdrop />
+          </div>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

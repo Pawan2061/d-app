@@ -1,6 +1,6 @@
-import Info from "./components/info";
 import Wallet from "./components/wallet";
-import { WalletProvider } from "@solana/wallet-adapter-react";
+import { Buffer } from "buffer";
+globalThis.Buffer = Buffer;
 
 export default function App() {
   return (

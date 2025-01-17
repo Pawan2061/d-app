@@ -1,6 +1,7 @@
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { useState } from "react";
+import Message from "./message";
 
 export default function Airdrop() {
   const wallet = useWallet();
@@ -85,6 +86,8 @@ export default function Airdrop() {
             <p className="text-xs text-gray-500">
               Maximum 2 SOL per request on devnet
             </p>
+
+            {/* <Message /> */}
           </div>
 
           <button

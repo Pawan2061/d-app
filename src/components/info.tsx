@@ -39,7 +39,7 @@ export default function Info() {
       {balance !== null ? (
         <div>Balance: {balance} SOL</div>
       ) : (
-        <div>Loading balance... {balance}</div>
+        <div className="text-xl text-red-700 ">Not connected </div>
       )}
     </div>
   );

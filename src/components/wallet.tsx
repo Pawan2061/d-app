@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import {
   ConnectionProvider,
-  useWallet,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
@@ -15,9 +14,9 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import Info from "./info";
 import Airdrop from "./airdrop";
 import SendSol from "./sendSol";
+import Message from "./message";
 
 function Wallet() {
-  const wallet = useWallet();
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
   const [activeTab, setActiveTab] = useState(0);
@@ -25,6 +24,7 @@ function Wallet() {
   const tabs = [
     { label: "Airdrop", component: <Airdrop /> },
     { label: "Send SOL", component: <SendSol /> },
+    { label: "Send a message", component: <Message /> },
   ];
 
   return (

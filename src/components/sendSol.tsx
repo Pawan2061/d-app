@@ -177,7 +177,7 @@ export default function SendSol() {
     }
   };
 
-  console.log("just chckingggg");
+  console.log("just checking part 2");
 
   return (
     <div className="flex items-center justify-center min-h-full p-6">

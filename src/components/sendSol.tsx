@@ -177,6 +177,8 @@ export default function SendSol() {
     }
   };
 
+  console.log("just chckingggg");
+
   return (
     <div className="flex items-center justify-center min-h-full p-6">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg">

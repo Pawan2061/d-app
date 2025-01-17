@@ -1,4 +1,4 @@
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 import { ed25519 } from "@noble/curves/ed25519";
 import { useState } from "react";

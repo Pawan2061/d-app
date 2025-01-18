@@ -1,3 +1,4 @@
+import Additional from "./components/Additonal";
 import Footer from "./components/footer";
 import Wallet from "./components/wallet";
 import { Buffer } from "buffer";
@@ -9,6 +10,7 @@ export default function App() {
       {/* <WalletProvider wallets={[]} autoConnect> */}
       <Wallet />
       {/* <Info /> */}
+      <Additional />
       <Footer />
       {/* </WalletProvider> */}
     </div>

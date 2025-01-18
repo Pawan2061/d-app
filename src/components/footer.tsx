@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Globe } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,12 +6,12 @@ const Footer = () => {
       <div className="container mx-auto flex items-center justify-center gap-6">
         <div className="h-px w-20 bg-gray-300"></div>
         <a
-          href="https://github.com/Pawan2061/d-app"
+          href="https://cryptowallet-nu.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 hover:text-gray-900 transition-colors"
+          className="text-gray-600 border p-2 rounded-2xl bg-gray-200  hover:text-gray-900 transition-colors"
         >
-          <Github size={20} />
+          <Globe size={20} />
         </a>
         <div className="h-px w-20 bg-gray-300"></div>
       </div>
